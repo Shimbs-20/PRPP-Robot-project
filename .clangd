@@ -1,0 +1,33 @@
+CompileFlags:
+  CompilationDatabase: .
+  Remove:
+    - -mlongcalls
+    - -fstrict-volatile-bitfields
+    - -fno-tree-switch-conversion
+    - -Wno-frame-address
+    - -ffunction-sections
+    - -fdata-sections
+    - -Wall
+    - -Werror=all
+    - -Wextra
+    - -Wno-error=unused-function
+    - -Wno-error=unused-variable
+    - -Wno-error=deprecated-declarations
+    - -Wno-unused-parameter
+    - -Wno-sign-compare
+  Add:
+    - -ferror-limit=0
+    - -D__CLANGD__
+
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: None
+  Suppress:
+    - "*"
+  ClangTidy:
+    Add: []
+    Remove: "*"
+    CheckOptions: []
+
+Index:
+  Background: Build
